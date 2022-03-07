@@ -1,11 +1,11 @@
 import React from 'react';
 import {Text, View, TouchableOpacity, ScrollView} from 'react-native';
 import 'react-native-gesture-handler';
-import { MaterialIcons,FontAwesome, AntDesign  } from '@expo/vector-icons';
+// import { MaterialIcons,FontAwesome, AntDesign  } from '@expo/vector-icons';
 import tailwind from 'tailwind-react-native-classnames';
 import LinearGradient from 'react-native-linear-gradient';
 import { Button, Input } from 'react-native-elements';
-
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 const SummaryScreen = ({navigation}) => {
     return (
         <View style={tailwind`bg-tertiary h-full flex`}>
@@ -32,6 +32,10 @@ const SummaryScreen = ({navigation}) => {
                         <Text style={tailwind`text-primary font-bold text-lg absolute right-0`}>Php 3,000.00</Text>
                     </View>
                     <View style={tailwind`bg-white rounded-2xl border-t-primary border-t-2 p-4 m-2`}>
+                    <View style={tailwind`my-4`}>
+                        <Text style={tailwind`text-black text-lg`}>My Vehicle</Text>
+                        <Text style={tailwind`text-primary text-lg absolute right-0`}>Change</Text>
+                    </View>
                         <View style={tailwind`p-2`}>
                             <Text style={tailwind`text-sm text-secondary`}>Car Make</Text>
                             <Text style={tailwind`absolute text-sm text-black right-0 m-2`}>Toyota</Text>
@@ -56,15 +60,19 @@ const SummaryScreen = ({navigation}) => {
                             <Text style={tailwind`text-sm text-secondary`}>Odometer</Text>
                             <Text style={tailwind`absolute text-sm text-black right-0 m-2`}>Toyota</Text>
                         </View>
-                        <View style={tailwind` items-center`}>
+                        {/* <View style={tailwind` items-center`}>
                             <Button title="Edit"
                                 titleStyle={tailwind`text-lg font-bold`}
                                 buttonStyle={tailwind`bg-primary items-center text-lg`}
                                 containerStyle={tailwind`bg-primary items-center w-40 rounded-lg`}
                             />
-                        </View>
+                        </View> */}
                     </View>
                     <View style={tailwind`bg-white rounded-2xl border-t-primary border-t-2 p-4 m-2`}>
+                        <View style={tailwind`my-4`}>
+                            <Text style={tailwind`text-black text-lg`}>Details</Text>
+                            <Text style={tailwind`text-primary text-lg absolute right-0`}>Change</Text>
+                        </View>                        
                         <View style={tailwind`p-2`}>
                             <Text style={tailwind`text-sm text-secondary`}>Address</Text>
                             <Text style={tailwind`text-sm text-black`}>House #21, San Antonio Village, Davao City</Text>
@@ -76,13 +84,6 @@ const SummaryScreen = ({navigation}) => {
                         <View style={tailwind`p-2`}>
                             <Text style={tailwind`text-sm text-secondary`}>Time</Text>
                             <Text style={tailwind`text-sm text-black`}>6:37 AM</Text>
-                        </View>
-                        <View style={tailwind` items-center`}>
-                            <Button title="Edit"
-                                titleStyle={tailwind`text-lg font-bold`}
-                                buttonStyle={tailwind`bg-primary items-center text-lg`}
-                                containerStyle={tailwind`bg-primary items-center w-40 rounded-lg`}
-                            />
                         </View>
                     </View>
                 </View>

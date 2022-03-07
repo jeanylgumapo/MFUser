@@ -35,8 +35,6 @@ const PaymentScreen = ({navigation}) => {
         setRadioButtons(radioButtonsArray);
         console.log(radioButtons);
     }
-    const [check2, setCheck2] = useState(false);
-    const [check, setCheck] = useState(false);
     return (
         <View>
             <LinearGradient 

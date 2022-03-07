@@ -1,11 +1,18 @@
 import React from 'react';
 import {Text, View} from 'react-native';
-import 'react-native-gesture-handler';
-
+import NotificationCard from '../../components/NotificationCard';
+import tailwind from 'tailwind-react-native-classnames';
 const ActivityScreen = () => {
     return (
         <View>
-            <Text> Activity</Text>
+            <Text style={tailwind`text-2xl font-bold text-primary-color`}>Your Recent Bookings</Text>
+            <View style={tailwind`p-4`}>
+                {/* <NotificationCard/>
+                <NotificationCard/>
+                <NotificationCard/>
+                <NotificationCard/> */}
+                
+            </View>
         </View>
     )
 };

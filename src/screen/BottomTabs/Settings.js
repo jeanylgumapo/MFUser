@@ -3,8 +3,13 @@ import {ScrollView, Text, View, Switch, TouchableOpacity} from 'react-native';
 import 'react-native-gesture-handler';
 import tailwind from 'tailwind-react-native-classnames';
 import LinearGradient from 'react-native-linear-gradient';
-import { FontAwesome5,Octicons, MaterialCommunityIcons,AntDesign,FontAwesome ,Entypo,MaterialIcons, Ionicons   } from '@expo/vector-icons';
-
+// import { FontAwesome5,Octicons, MaterialCommunityIcons,AntDesign,FontAwesome ,Entypo,MaterialIcons, Ionicons   } from '@expo/vector-icons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import Octicons from 'react-native-vector-icons/Octicons';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import Entypo from 'react-native-vector-icons/Entypo';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const SettingsScreen = ({navigation}) => {
     const [isEnabled, setIsEnabled] = useState(false);
