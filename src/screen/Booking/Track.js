@@ -12,6 +12,8 @@ import tailwind from 'tailwind-react-native-classnames';
 import { Input, Button } from 'react-native-elements';
 import LinearGradient from 'react-native-linear-gradient';
 import { Countdown} from 'react-native-element-timer';
+import StepIndicator from 'react-native-step-indicator/lib/typescript/src/types';
+
 
 const TrackScreen = ({navigation}) => {
     const [modalOpen, setModalOpen]=useState(false);

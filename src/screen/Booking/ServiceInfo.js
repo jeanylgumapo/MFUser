@@ -48,7 +48,7 @@ const ServiceInfoScreen = ({navigation}) => {
                 <ImageBackground source ={require('../../../assets/info.jpg')} resizeMode="cover" style={tailwind`h-44 w-full `}>
                     <View style={tailwind`flex-row left-0 top-0 m-2 items-center`}>
                         <MaterialIcons name="arrow-back-ios" size={24} color="white" />
-                        <TouchableOpacity><Text style={tailwind`text-base text-white`}>Back</Text></TouchableOpacity>
+                        <TouchableOpacity  onPress={()=>navigation.goBack()}><Text style={tailwind`text-base text-white`}>Back</Text></TouchableOpacity>
                     </View>
                     {/* <Image style={tailwind`h-44 w-full `} source ={require('../../../assets/info.jpg')}/>  */}
                     </ImageBackground>

@@ -11,16 +11,39 @@ const Stack= createNativeStackNavigator();
 
 function SettingsStack(){
     return(
-        <Stack.Navigator>
+        <Stack.Navigator initialRouteName={'Settings'}>
             <Stack.Screen 
                 name="Settings" 
-                component={SettingsScreen}  
+                // component={SettingsScreen}  
                 options={{
                     headerShown:false,
                     }
                 }              
-            />
-            <Stack.Screen 
+            >
+               {()=>(
+                   
+                <Stack.Navigator >
+                    <Stack.Screen 
+                        name="Settings" 
+                        component={SettingsScreen} 
+                        options={{
+                            headerShown:false,
+                            }
+                        }  
+                    />                                  
+                    <Stack.Screen 
+                        name="Garage" 
+                        component={GarageScreen}  
+                        options={{
+                            headerShown:false,
+                            }
+                        }              
+                    />
+
+                </Stack.Navigator> 
+               )} 
+            </Stack.Screen>
+            {/* <Stack.Screen 
                 name="Garage" 
                 component={GarageScreen}  
                 options={{
@@ -59,7 +82,7 @@ function SettingsStack(){
                     headerShown:false,
                     }
                 }  
-            /> 
+            />  */}
       </Stack.Navigator>
     );
 }
