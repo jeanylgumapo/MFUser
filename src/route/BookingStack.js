@@ -19,6 +19,7 @@ import BottomTab from '../components/BottomTab';
 // import BookingStack from './BookingStack';
 import SettingsStack from './SettingsStack';
 import GarageScreen from '../screen/Settings/Garage';
+import ChatScreen from '../screen/Booking/Chat';
 const Tab = createBottomTabNavigator();
 function BookingStack(){
     return(
@@ -91,6 +92,14 @@ function BookingStack(){
                     }
                 }  
             />  
+            <Stack.Screen 
+                name="Chat" 
+                component={ChatScreen} 
+                options={{
+                    headerShown:false,
+                    }
+                }  
+            /> 
       </Stack.Navigator>
     //   </NavigationContainer>
     );

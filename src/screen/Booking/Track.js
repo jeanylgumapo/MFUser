@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Text, View, TouchableOpacity, Image, ScrollView, Modal} from 'react-native';
 import 'react-native-gesture-handler';
 // import { Ionicons,MaterialIcons,MaterialCommunityIcons,Entypo,FontAwesome5 } from '@expo/vector-icons';
@@ -12,12 +12,38 @@ import tailwind from 'tailwind-react-native-classnames';
 import { Input, Button } from 'react-native-elements';
 import LinearGradient from 'react-native-linear-gradient';
 import { Countdown} from 'react-native-element-timer';
-import StepIndicator from 'react-native-step-indicator/lib/typescript/src/types';
+// import StepIndicator from 'react-native-step-indicator/lib/typescript/src/types';
+import ProgressSteps, { Title, Content } from '@joaosousa/react-native-progress-steps';
 
-
+// const labels = ["Cart","Delivery Address","Order Summary","Payment Method","Track"];
+// const customStyles = {
+//   stepIndicatorSize: 25,
+//   currentStepIndicatorSize:30,
+//   separatorStrokeWidth: 2,
+//   currentStepStrokeWidth: 3,
+//   stepStrokeCurrentColor: '#fe7013',
+//   stepStrokeWidth: 3,
+//   stepStrokeFinishedColor: '#fe7013',
+//   stepStrokeUnFinishedColor: '#aaaaaa',
+//   separatorFinishedColor: '#fe7013',
+//   separatorUnFinishedColor: '#aaaaaa',
+//   stepIndicatorFinishedColor: '#fe7013',
+//   stepIndicatorUnFinishedColor: '#ffffff',
+//   stepIndicatorCurrentColor: '#ffffff',
+//   stepIndicatorLabelFontSize: 13,
+//   currentStepIndicatorLabelFontSize: 13,
+//   stepIndicatorLabelCurrentColor: '#fe7013',
+//   stepIndicatorLabelFinishedColor: '#ffffff',
+//   stepIndicatorLabelUnFinishedColor: '#aaaaaa',
+//   labelColor: '#999999',
+//   labelSize: 13,
+//   currentStepLabelColor: '#fe7013'
+// }
 const TrackScreen = ({navigation}) => {
+    // const [currentPosition, setCurrentPosition]=useState(0);
+    const [step, setStep] = useState(0);
     const [modalOpen, setModalOpen]=useState(false);
-    const countdownRef = useRef(null);
+    // const countdownRef = useRef(null);
     return (
         <View style={tailwind`bg-tertiary h-full flex`}>
             <ScrollView>
@@ -84,7 +110,7 @@ const TrackScreen = ({navigation}) => {
                             // value={email}
                             // onChangeText={text=> setEmail(text)}
                             containerStyle={tailwind`h-14`}
-                            rightIcon={()=><TouchableOpacity style={tailwind`p-1 bg-primary rounded-lg`}><AntDesign name="message1" size={24} color="white" /></TouchableOpacity>}                
+                            rightIcon={()=><TouchableOpacity style={tailwind`p-1 bg-primary rounded-lg`} onPress={()=> navigation.navigate('Chat')}><AntDesign name="message1" size={24} color="white" /></TouchableOpacity>}                
                             inputContainerStyle={tailwind`border-0 bg-tertiary px-2 mx-2 rounded shadow-md`}
                         />
                     </View>
@@ -93,7 +119,48 @@ const TrackScreen = ({navigation}) => {
                             Work in Progress
                         </Text>
                         <View>
-                            <Text>Step Progress</Text>
+                            {/* <StepIndicator
+                                customStyles={customStyles}
+                                currentPosition={currentPosition}
+                                labels={labels}
+                            /> */}
+                        
+                        <ProgressSteps
+                            currentStep={step}
+                            steps={[
+                                {
+                                id: /* Your id */"1",
+                                title: <Title>{/* Your title */}Step 1</Title>,
+                                content: <Content>{/* Your content */}</Content>,
+                                },
+                                {
+                                id: /* Your id */"2",
+                                title: <Title>{/* Your title */} Step 2</Title>,
+                                content: <Content>{/* Your content */}</Content>,
+                                },
+                            ]}
+                            colors={{
+                                title: {
+                                text: {
+                                    normal: '#94d2bd',
+                                    active: '#005f73',
+                                    completed: '#005f73',
+                                },
+                                },
+                                marker: {
+                                text: {
+                                    normal: '#94d2bd',
+                                    active: '#005f73',
+                                    completed: '#f4f3ee',
+                                },
+                                line: {
+                                    normal: '#94d2bd',
+                                    active: '#005f73',
+                                    completed: '#005f73',
+                                },
+                                },
+                            }}
+                            />
                         </View>
                         <View style={tailwind`bg-tertiary justify-center items-center p-4 rounded-lg m-2`}>
                             <Text style={tailwind`text-secondary text-base`}>Estimated Completion</Text>
