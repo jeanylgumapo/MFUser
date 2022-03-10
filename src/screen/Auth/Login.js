@@ -27,7 +27,7 @@ const LoginScreen = ({navigation}) => {
                         // errorMessage='ENTER A VALID ERROR HERE'
                         // value={email}
                         // onChangeText={text=> setEmail(text)}
-                        containerStyle={tailwind``}
+                        // containerStyle={tailwind``}
                         containerStyle={tailwind`h-14 my-2`}
                         leftIcon={()=><Foundation name="mail"  style={tailwind`px-2`}size={24} color="#3593C5" />}
                         inputStyle={tailwind`text-lg text-gray-400`}
