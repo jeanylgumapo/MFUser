@@ -24,7 +24,7 @@ const DashboardScreen = ({navigation}) => {
                         <View style={tailwind`flex-row my-2 justify-center`}>
                             <TouchableOpacity style={tailwind`border-2 bg-white justify-center items-center py-4 px-4 rounded-xl m-1 border-gray-100`} onPress={()=> {navigation.navigate('ServiceInfo')}}>
                                 <Image style={tailwind`w-12 h-12 `} source ={require('../../../assets/diagnostic.png')}/>
-                                <Text style={tailwind`text-xs mt-2`}>Diagnostic</Text>
+                                <Text style={tailwind`text-xs xl:text-base md:text-xl mt-2`}>Diagnostic</Text>
                             </TouchableOpacity>
                             <View style={tailwind`border-2 justify-center bg-white items-center py-4 px-4 rounded-xl m-1 border-gray-100`}>
                                 <Image style={tailwind`w-12 h-12 `} source ={require('../../../assets/change-oil.png')}/>

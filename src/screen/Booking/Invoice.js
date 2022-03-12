@@ -6,7 +6,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {  Button } from 'react-native-elements';
 
-const InvoiceScreen = () => {
+const InvoiceScreen = ({navigation}) => {
     return (
         <View style={tailwind`bg-white h-full`}>
             <View style={tailwind`bg-white`}>
@@ -64,7 +64,7 @@ const InvoiceScreen = () => {
             </View>
             <View style={tailwind`justify-center  bottom-0 flex w-full items-center py-8`}>
                     <Button title="Continue"
-                        onPress={()=> navigation.navigate("Payment")}
+                        onPress={()=> navigation.navigate("Feedback")}
                         titleStyle={tailwind`text-lg font-bold`}
                         buttonStyle={tailwind`bg-primary items-center text-lg`}
                         containerStyle={tailwind`bg-primary items-center w-3/4 rounded-lg`}

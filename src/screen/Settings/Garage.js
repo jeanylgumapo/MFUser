@@ -4,7 +4,9 @@ import 'react-native-gesture-handler';
 import tailwind from 'tailwind-react-native-classnames';
 import SubHeader from '../../components/SubHeader';
 import LinearGradient from 'react-native-linear-gradient';
-import { MaterialIcons,EvilIcons } from '@expo/vector-icons';
+// import { MaterialIcons,EvilIcons } from '@expo/vector-icons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import AddGarage from '../../components/AddGarage';
 
 

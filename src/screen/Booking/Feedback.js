@@ -9,7 +9,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import { ScrollView } from 'react-native-gesture-handler';
 import { Input, Button ,CheckBox, Icon } from 'react-native-elements';
 
-const FeedbackScreen = () => {
+const FeedbackScreen = ({navigation}) => {
     const [check1, setCheck1] = useState(false);
     return (
         <View style={tailwind`h-full bg-tertiary`}>
@@ -136,7 +136,7 @@ const FeedbackScreen = () => {
                 </View> 
                 <View style={tailwind`justify-center bottom-0 flex w-full items-center my-4`}>
                     <Button title="Submit"
-                        // onPress={()=> navigation.navigate("Summary")}
+                        onPress={()=> {navigation.navigate('BottomTabStack')}}
                         titleStyle={tailwind`text-lg font-bold`}
                         buttonStyle={tailwind`bg-primary items-center text-lg`}
                         containerStyle={tailwind`bg-primary items-center w-3/4 rounded-lg`}

@@ -11,7 +11,8 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import tailwind from 'tailwind-react-native-classnames';
 import { Input, Button } from 'react-native-elements';
 import LinearGradient from 'react-native-linear-gradient';
-import { Countdown} from 'react-native-element-timer';
+// import { Countdown} from 'react-native-element-timer';
+import CountDown from 'react-native-countdown-component';
 // import StepIndicator from 'react-native-step-indicator/lib/typescript/src/types';
 import ProgressSteps, { Title, Content } from '@joaosousa/react-native-progress-steps';
 
@@ -118,7 +119,7 @@ const TrackScreen = ({navigation}) => {
                         <Text style={tailwind`text-black text-xl`}>
                             Work in Progress
                         </Text>
-                        <View>
+                        <View style={tailwind`p-4`}>
                             {/* <StepIndicator
                                 customStyles={customStyles}
                                 currentPosition={currentPosition}
@@ -130,33 +131,43 @@ const TrackScreen = ({navigation}) => {
                             steps={[
                                 {
                                 id: /* Your id */"1",
-                                title: <Title>{/* Your title */}Step 1</Title>,
+                                title: <Title>{/* Your title */}Booking Confirmed</Title>,
                                 content: <Content>{/* Your content */}</Content>,
                                 },
                                 {
                                 id: /* Your id */"2",
-                                title: <Title>{/* Your title */} Step 2</Title>,
+                                title: <Title>{/* Your title */} Preparing Items</Title>,
                                 content: <Content>{/* Your content */}</Content>,
                                 },
+                                {
+                                id: /* Your id */"3",
+                                title: <Title>{/* Your title */} Arrived at the Location</Title>,
+                                content: <Content>{/* Your content */}</Content>,
+                                },  
+                                {
+                                id: /* Your id */"4",
+                                title: <Title>{/* Your title */} Begin Job Progress</Title>,
+                                content: <Content>{/* Your content */}</Content>,
+                                },                             
                             ]}
                             colors={{
                                 title: {
                                 text: {
-                                    normal: '#94d2bd',
-                                    active: '#005f73',
-                                    completed: '#005f73',
+                                    normal: '#6FACC7',
+                                    active: '#3376B2',
+                                    completed: '#3376B2',
                                 },
                                 },
                                 marker: {
                                 text: {
-                                    normal: '#94d2bd',
-                                    active: '#005f73',
+                                    normal: '#6FACC7',
+                                    active: '#3376B2',
                                     completed: '#f4f3ee',
                                 },
                                 line: {
-                                    normal: '#94d2bd',
-                                    active: '#005f73',
-                                    completed: '#005f73',
+                                    normal: '#6FACC7',
+                                    active: '#3376B2',
+                                    completed: '#3376B2',
                                 },
                                 },
                             }}
@@ -186,6 +197,14 @@ const TrackScreen = ({navigation}) => {
                         </View>                       
                     </View>
                 </View>
+                <CountDown
+                    until={5}
+                    // style={tailwind`h-0`}
+                    // visible={false}
+                    onFinish={() => navigation.navigate('Invoice')}
+                    // onPress={() => alert('hello')}
+                    size={0}
+                />
             </ScrollView>
             
         </View>

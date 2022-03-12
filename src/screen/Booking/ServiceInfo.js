@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Text, View, Image, TouchableOpacity, ScrollView, ImageBackground, Alert } from 'react-native';
+import {Text, View, Image, TouchableOpacity, ScrollView, ImageBackground, Alert, Modal } from 'react-native';
 import 'react-native-gesture-handler';
 
 import tailwind from 'tailwind-react-native-classnames';
@@ -9,9 +9,12 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import EvilIcons from 'react-native-vector-icons/EvilIcons';
+import AddGarage from '../../components/AddGarage';
 
 const ServiceInfoScreen = ({navigation}) => {
     const [showBox, setShowBox] = useState(true);
+    const [modalOpen, setModalOpen]=useState(false);
     const showConfirmDialog = () => {
         return Alert.alert(
           "Add Service?",
@@ -27,7 +30,8 @@ const ServiceInfoScreen = ({navigation}) => {
             {
                 text: "Yes",
                 onPress: () => {
-                    setShowBox(false);
+                    // setShowBox(false);
+                    setModalOpen(true) 
                     // navigation.navigate('BottomTabStack')
 
                 },
@@ -44,6 +48,15 @@ const ServiceInfoScreen = ({navigation}) => {
       };
     return (
         <View style={tailwind`bg-tertiary h-full`}>
+            <Modal visible={modalOpen}>
+                <View style={tailwind`bg-primary p-4 flex-row`}>
+                    <TouchableOpacity onPress={() => setModalOpen(false) } >
+                        <EvilIcons name="close" size={24} color="white" />
+                    </TouchableOpacity>
+                    <Text style={tailwind`text-white font-bold text-base mx-2`}> Add New Vehicle</Text>                       
+                </View>
+                <AddGarage/>
+            </Modal>            
             <ScrollView>
                 <ImageBackground source ={require('../../../assets/info.jpg')} resizeMode="cover" style={tailwind`h-44 w-full `}>
                     <View style={tailwind`flex-row left-0 top-0 m-2 items-center`}>
