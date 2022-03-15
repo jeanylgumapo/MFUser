@@ -39,6 +39,14 @@ function SettingsStack(){
                             }
                         }              
                     />
+                    <Stack.Screen 
+                        name="Transaction" 
+                        component={TransactionScreen}  
+                        options={{
+                            headerShown:false,
+                            }
+                        }              
+                    />
 
                 </Stack.Navigator> 
                )} 

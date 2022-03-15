@@ -22,15 +22,15 @@ const DashboardScreen = ({navigation}) => {
                             <Text style={tailwind`font-bold text-lg mx-2 text-black`}>Select Service</Text>
                         </View>
                         <View style={tailwind`flex-row my-2 justify-center`}>
-                            <TouchableOpacity style={tailwind`border-2 bg-white justify-center items-center py-4 px-4 rounded-xl m-1 border-gray-100`} onPress={()=> {navigation.navigate('ServiceInfo')}}>
+                            <TouchableOpacity style={tailwind`border-2 bg-white justify-center items-center p-8 rounded-xl m-1 border-gray-100`} onPress={()=> {navigation.navigate('ServiceInfo')}}>
                                 <Image style={tailwind`w-12 h-12 `} source ={require('../../../assets/diagnostic.png')}/>
                                 <Text style={tailwind`text-xs xl:text-base md:text-xl mt-2`}>Diagnostic</Text>
                             </TouchableOpacity>
-                            <View style={tailwind`border-2 justify-center bg-white items-center py-4 px-4 rounded-xl m-1 border-gray-100`}>
+                            <View style={tailwind`border-2 justify-center bg-white items-center p-8 rounded-xl m-1 border-gray-100`}>
                                 <Image style={tailwind`w-12 h-12 `} source ={require('../../../assets/change-oil.png')}/>
                                 <Text style={tailwind`text-xs mt-2`}>Change Oil</Text>
                             </View>
-                            <View style={tailwind`border-2 justify-center bg-white items-center py-4 px-4 rounded-xl m-1 border-gray-100`}>
+                            <View style={tailwind`border-2 justify-center bg-white items-center p-8 rounded-xl m-1 border-gray-100`}>
                                 <Image style={tailwind`w-12 h-12 `} source ={require('../../../assets/change-oil.png')}/>
                                 <Text style={tailwind`text-xs mt-2`}>Change Oil</Text>
                             </View>
@@ -45,7 +45,7 @@ const DashboardScreen = ({navigation}) => {
                             <Text style={tailwind`font-bold text-lg mx-2 text-black`}>Other Services</Text>
                         </View>
                         <View style={tailwind`flex-row mx-2 justify-center`}>
-                            <View style={tailwind`p-4  border-2 border-gray-100 rounded-xl bg-white`}>
+                            <View style={tailwind`p-8  m-1 border-2 border-gray-100 rounded-xl bg-white`}>
                                 <Image style={tailwind`w-32 h-20 rounded-xl `} source ={require('../../../assets/replace.jpg')}/>
                                 <Text style={tailwind`text-secondary text-sm`}>Replace Battery</Text>
                                 <Text style={tailwind`text-xs text-secondary`}>Replace car battery with</Text>
@@ -54,7 +54,7 @@ const DashboardScreen = ({navigation}) => {
                                     <TouchableOpacity style={tailwind`absolute right-0 bg-primary rounded p-1`}><Text style={tailwind`text-white text-xs px-1`}>Book</Text></TouchableOpacity>
                                 </View>
                             </View>
-                            <View style={tailwind`p-4  border-2 border-gray-100 rounded-xl bg-white`}>
+                            <View style={tailwind`p-8 m-1  border-2 border-gray-100 rounded-xl bg-white`}>
                                 <Image style={tailwind`w-32 h-20 rounded-xl `} source ={require('../../../assets/replace.jpg')}/>
                                 <Text style={tailwind`text-secondary text-sm`}>Replace Battery</Text>
                                 <Text style={tailwind`text-xs text-secondary`}>Replace car battery with</Text>
@@ -65,7 +65,7 @@ const DashboardScreen = ({navigation}) => {
                             </View>
                         </View>
                     </View>
-                    <View style={tailwind`mx-4 mt-4`}>
+                    <View style={tailwind`mx-4`}>
                         <View style={tailwind`flex-row items-center my-2`}>
                             <FontAwesome5 name="blogger-b" size={24} color="#3391C3" />
                             <Text style={tailwind`font-bold text-lg mx-2 text-black`}>Blog Posts</Text>

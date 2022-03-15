@@ -136,7 +136,7 @@ const FeedbackScreen = ({navigation}) => {
                 </View> 
                 <View style={tailwind`justify-center bottom-0 flex w-full items-center my-4`}>
                     <Button title="Submit"
-                        onPress={()=> {navigation.navigate('BottomTabStack')}}
+                        onPress={()=> {navigation.navigate('Dashboard')}}
                         titleStyle={tailwind`text-lg font-bold`}
                         buttonStyle={tailwind`bg-primary items-center text-lg`}
                         containerStyle={tailwind`bg-primary items-center w-3/4 rounded-lg`}

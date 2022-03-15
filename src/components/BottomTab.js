@@ -36,7 +36,7 @@ const BottomTab=({state, descriptors, navigation}) =>{
                 accessibilityRole='button'
                 >
                     {index===0 && (
-                        <View style={tailwind`p-4 mx-4`}>
+                        <View style={tailwind`p-4 mx-8`}>
                             {isFocused ? <Entypo name="home" size={24} color={color} />:
                             <Ionicons name="home-outline" size={24} color="#DAD7E0" />
                             }
@@ -45,7 +45,7 @@ const BottomTab=({state, descriptors, navigation}) =>{
                     )}
                
                     {index===1 && (
-                         <View style={tailwind`p-4 mx-4`}>
+                         <View style={tailwind`p-4 mx-8`}>
                             {isFocused ? 
                             <FontAwesome name="car" size={24} color={color} />:
                             <FontAwesome name="car" size={24} color="#DAD7E0" />
@@ -61,14 +61,14 @@ const BottomTab=({state, descriptors, navigation}) =>{
                         </View>
                     )} */}
                     {index===2 && (
-                         <View style={tailwind`p-4 mx-4`}>
+                         <View style={tailwind`p-4 mx-8`}>
                             {isFocused ? <Entypo name="bookmark" size={24} color={color} />:
                             <Entypo name="bookmark" size={24} color="#DAD7E0" />
                             }
                         </View>
                     )}
                     {index===3 && (
-                         <View style={tailwind`p-4 mx-4`}>
+                         <View style={tailwind`p-4 mx-8`}>
                             {isFocused ? <Ionicons name="settings" size={24} color={color}/>:
                             <Ionicons name="settings" size={24} color="#DAD7E0" />
                             }
